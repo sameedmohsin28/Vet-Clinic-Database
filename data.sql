@@ -55,3 +55,41 @@ UPDATE animals
 SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
 WHERE NAME IN ('Angemon', 'Boarmon');
 COMMIT;
+
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES
+('Willaim Tatcher', 45, TO_DATE('2000-04-23', 'YYYY-MM-DD')),
+('Maisy Smith', 26, TO_DATE('2019-01-17', 'YYYY-MM-DD')),
+('Stephanie Mendez', 64, TO_DATE('1981-05-04', 'YYYY-MM-DD')),
+('Jack Harkness', 38, TO_DATE('2008-06-08', 'YYYY-MM-DD'));
+
+INSERT INTO specializations (vets, species)
+VALUES
+((SELECT id FROM vets WHERE name = 'William Tatcher'), (SELECT id FROM species WHERE name = 'Pokemon')),
+((SELECT id FROM vets WHERE name = 'Stephanie Mendez'), (SELECT id FROM species WHERE name = 'Digimon')),
+((SELECT id FROM vets WHERE name = 'Stephanie Mendez'), (SELECT id FROM species WHERE name = 'Pokemon')),
+((SELECT id FROM vets WHERE name = 'Jack Harkness'), (SELECT id FROM species WHERE name = 'Digimon'));
+
+INSERT INTO visits (animals, vets, visit_date)
+VALUES
+((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('2020-05-24', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('2020-07-22', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Gabumon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('2021-02-02', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-01-05', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-03-08', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-05-14', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Devimon'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('2021-05-04', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Charmander'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('2021-02-24', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2018-12-21', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('2020-08-10', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2021-04-07', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Squirtle'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('2019-09-29', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('2020-10-03', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('2020-11-04', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2019-01-24', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2019-05-15', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-02-27', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-08-03', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('2020-05-24', 'YYYY-MM-DD')),
+((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('2021-01-11', 'YYYY-MM-DD'));

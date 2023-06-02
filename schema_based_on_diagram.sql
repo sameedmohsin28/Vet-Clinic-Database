@@ -29,3 +29,13 @@ CREATE TABLE treatments_medical_histories (
   FOREIGN KEY (treatment_id) REFERENCES treatments (id),
   FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
+
+-- create invoices table
+CREATE TABLE invoices (
+  id SERIAL PRIMARY KEY,
+  total_amount NUMERIC(10, 2) NOT NULL,
+  generated_at TIMESTAMP NOT NULL,
+  payed_at TIMESTAMP,
+  medical_history_id INTEGER NOT NULL,
+  FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
+);

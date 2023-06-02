@@ -1,7 +1,7 @@
 -- create patients table
 CREATE TABLE patients (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
+  name VARCHAR NOT NULL,
   date_of_birth DATE NOT NULL
 );
 
@@ -9,7 +9,7 @@ CREATE TABLE patients (
 CREATE TABLE medical_histories (
   id SERIAL PRIMARY KEY,
   admitted_at TIMESTAMP NOT NULL,
-  status TEXT NOT NULL,
+  status VARCHAR NOT NULL,
   patient_id INTEGER NOT NULL,
   FOREIGN KEY (patient_id) REFERENCES patients (id)
 );
@@ -17,8 +17,8 @@ CREATE TABLE medical_histories (
 -- create treatments table
 CREATE TABLE treatments (
   id SERIAL PRIMARY KEY,
-  type TEXT NOT NULL,
-  name TEXT NOT NULL
+  type VARCHAR NOT NULL,
+  name VARCHAR NOT NULL
 );
 
 -- create treatments_medical_histories table for many-to-many relationship
@@ -33,7 +33,7 @@ CREATE TABLE treatments_medical_histories (
 -- create invoices table
 CREATE TABLE invoices (
   id SERIAL PRIMARY KEY,
-  total_amount NUMERIC(10, 2) NOT NULL,
+  total_amount DECIMAL(10, 2) NOT NULL,
   generated_at TIMESTAMP NOT NULL,
   payed_at TIMESTAMP,
   medical_history_id INTEGER NOT NULL,
@@ -43,9 +43,9 @@ CREATE TABLE invoices (
 -- create invoice_items table for many-to-many relationship
 CREATE TABLE invoice_items (
   id SERIAL PRIMARY KEY,
-  unit_price NUMERIC(10,2) NOT NULL,
+  unit_price DECIMAL(10,2) NOT NULL,
   quantity INTEGER NOT NULL,
-  total_price NUMERIC(10,2) NOT NULL,
+  total_price DECIMAL(10,2) NOT NULL,
   invoice_id INTEGER NOT NULL,
   treatment_id INTEGER NOT NULL,
   FOREIGN KEY (invoice_id) REFERENCES invoices (id),

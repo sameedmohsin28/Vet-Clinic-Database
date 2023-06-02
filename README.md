@@ -121,6 +121,6 @@ I would like to thank Microverse for teaching me PostgreSQL.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/sameedmohsin28/Vet-Clinic-Database/blob/database-from-diagram/LICENSE) licensed.
+This project is [MIT](https://github.com/sameedmohsin28/Vet-Clinic-Database/blob/database_from_diagram/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

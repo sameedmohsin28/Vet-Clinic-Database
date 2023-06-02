@@ -79,6 +79,16 @@ Clone this repository to your desired folder:
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
+👤 **Cosmos Hagan**
+
+- GitHub: [@Cosmosha](https://github.com/Cosmosha)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/cosmoshagan)
+
+👤 **Yoseph Addisu**
+
+- GitHub: [@yosaddis](https://github.com/yosaddis)
+- Twitter: [Yoseph Addisu](https://linkedin.com/in/yoseph-addisu-abate)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>

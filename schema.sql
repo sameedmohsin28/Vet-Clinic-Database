@@ -51,3 +51,12 @@ vets INT REFERENCES vets(id),
 visit_date DATE,
 PRIMARY KEY (animals, vets)
 );
+
+DROP TABLE visits;
+
+CREATE TABLE IF NOT EXISTS visits(
+  animals INT REFERENCES animals(id),
+  vets INT REFERENCES vets(id),
+  visit_date TIMESTAMP NOT NULL,
+  PRIMARY KEY (animals, vets, visit_date)
+);

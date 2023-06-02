@@ -20,3 +20,12 @@ CREATE TABLE treatments (
   type TEXT NOT NULL,
   name TEXT NOT NULL
 );
+
+-- create treatments_medical_histories table for many-to-many relationship
+CREATE TABLE treatments_medical_histories (
+  id SERIAL PRIMARY KEY,
+  treatment_id INTEGER NOT NULL,
+  medical_history_id INTEGER NOT NULL,
+  FOREIGN KEY (treatment_id) REFERENCES treatments (id),
+  FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
+);

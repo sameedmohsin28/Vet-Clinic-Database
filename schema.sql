@@ -64,4 +64,4 @@ CREATE TABLE IF NOT EXISTS visits(
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 CREATE INDEX idx_visits_animal_id ON visits(animals);
-
+CREATE INDEX idx_visits_vet_id_animal_id ON visits(vets, animals);

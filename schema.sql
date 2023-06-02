@@ -60,3 +60,5 @@ CREATE TABLE IF NOT EXISTS visits(
   visit_date TIMESTAMP NOT NULL,
   PRIMARY KEY (animals, vets, visit_date)
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);

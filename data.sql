@@ -93,3 +93,19 @@ VALUES
 ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('2020-08-03', 'YYYY-MM-DD')),
 ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('2020-05-24', 'YYYY-MM-DD')),
 ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('2021-01-11', 'YYYY-MM-DD'));
+
+
+INSERT INTO visits (animals, vets, visit_date) 
+	SELECT * FROM (SELECT id FROM animals) animal_ids, 
+	(SELECT id FROM vets) vets_ids, 
+	generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+
+INSERT INTO visits (animals, vets, visit_date) 
+	SELECT * FROM (SELECT id FROM animals) animal_ids, 
+	(SELECT id FROM vets) vets_ids, 
+	generate_series('2021-01-02'::timestamp, '2180-01-01', '4 hours') visit_timestamp;
+
+
+insert into owners (full_name, email)
+	select 'owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';

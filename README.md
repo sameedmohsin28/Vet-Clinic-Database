@@ -79,6 +79,16 @@ Clone this repository to your desired folder:
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
+👤 **Cosmos Hagan**
+
+- GitHub: [@Cosmosha](https://github.com/Cosmosha)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/cosmoshagan)
+
+👤 **Yoseph Addisu**
+
+- GitHub: [@yosaddis](https://github.com/yosaddis)
+- Twitter: [Yoseph Addisu](https://linkedin.com/in/yoseph-addisu-abate)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -111,6 +121,6 @@ I would like to thank Microverse for teaching me PostgreSQL.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/sameedmohsin28/Vet-Clinic-Database/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/sameedmohsin28/Vet-Clinic-Database/blob/database_from_diagram/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
